@@ -1,0 +1,35 @@
+<!-- <div [froalaEditor] [(ngModel)]="froalaText">Hello, Froala!</div> -->
+
+<div class="master-box-with-attachment">
+<div [froalaEditor]="options" [(ngModel)]="froalaText">Hello, Froala!</div>
+<ul class="forala-attachment-lists">
+    
+    <li *ngFor="let item of attachments">
+        <a [href]="item['data']" targert="_blank">{{item['name']}}</a> 
+        <img class="remove-attachment" src="assets/white-close-button-png-16.png" (click)="DeleteAttachment(item)" />
+    </li>
+</ul>
+</div>
+
+
+
+
+
+<p>Content Code - </p>
+<div>{{froalaText}}</div>
+
+
+
+<button type="button" (click)="SendMail()">Send Mail</button>
+
+
+<br>
+<br>
+<br>
+<div>
+    <textarea [(ngModel)]="textAreaContent"></textarea>
+</div>
+<div>
+    <button type="button" (click)="SetContent()">Set Content</button>
+</div>
+

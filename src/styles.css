@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+.alternateRows tbody tr:nth-child(2n) {
+    background: #f9f9f9;
+  }
+
+.alphaBracket {
+  counter-reset: list;
+}
+.alphaBracket > li {
+  list-style: none;
+}
+.alphaBracket > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+}
+.master-box-with-attachment{
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 1px 1px rgba(0,0,0,.16);
+}
+.fr-box.fr-basic.fr-top .fr-wrapper{
+  box-shadow: none !important;
+}
+.forala-attachment-lists {
+      display: flex;
+flex-wrap: wrap;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.forala-attachment-lists li{
+  list-style-type: none;
+  border: 1px solid lightgray;
+    margin: 10px;
+    padding: 15px 10px;
+flex-wrap: wrap;
+        display: flex;
+}
+
+.remove-attachment{
+  margin-left: 5px;
+  width:23px ;
+  height:20px;
+}
+.remove-attachment:hover{
+  margin-left: 5px;
+  cursor: pointer;
+    width:23px ;
+  height:20px;
+}
